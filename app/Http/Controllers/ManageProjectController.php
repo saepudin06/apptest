@@ -49,7 +49,7 @@ class ManageProjectController extends Controller
     public function store(Request $request)
     {
         ManageProject::create($request->all());
-        return redirect('manage_project');
+        return redirect('manage_project')->with('success', 'Insert Data successfully.');
     }
 
     /**
@@ -86,9 +86,17 @@ class ManageProjectController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'nama_project'  => 'required|string|max:32',
+            'deskripsi'  => 'required|string|max:255',
+            'tanggal_awal'  => 'required',
+            'tanggal_akhir'  => 'required'
+        ]);
+
+
         $data = ManageProject::find($id);
         $data->update($request->all());
-        return redirect('manage_project');
+        return redirect('manage_project')->with('success', 'Update Data successfully.');
     }
 
     /**
@@ -102,6 +110,6 @@ class ManageProjectController extends Controller
         $data = ManageProject::findOrFail($id);
 
         $data->delete();
-        return redirect('manage_project');
+        return redirect('manage_project')->with('success', 'Delete Data successfully.');
     }
 }

@@ -51,6 +51,8 @@
      <div class="col-6">
       <h2>List Peserta</h2>
      </div>
+     <div class="col-6"></div>
+     <div class="col-12">
      <table class="table table-hover">
          <tr>
           <th>NAMA</th>
@@ -63,6 +65,10 @@
          </tr>
          @endforeach
         </table>
+      </div>
+      <div class="col-12">
+          {{ $data->links() }}
+        </div>  
   </div>
 </div>
 @endsection

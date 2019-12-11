@@ -3,11 +3,12 @@
 
 @section('content')
 <div class="container">
-   <!--  @if(session('sukses'))
+    @if(session('success'))
     <div class="alert alert-success" role="alert">
-      {{ session('sukses') }}
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      {{ session('success') }}
     </div>
-    @endif -->
+    @endif
     <div class="row">
         <div class="col-6">
             <h1>Kelola Project</h1>
@@ -66,7 +67,7 @@
                         {{ csrf_field() }}
                       <div class="form-group">
                         <label for="InputNamaProject">Nama Project</label>
-                        <input type="text" class="form-control" name="nama_project" id="nama_project" placeholder="Nama Project">
+                        <input type="text" class="form-control" name="nama_project" id="nama_project" placeholder="Nama Project" required>
                       </div>
                       <div class="form-group">
                         <label for="InputDeskripsi">Deskripsi</label>
@@ -74,7 +75,7 @@
                       </div>
                       <div class="form-group">
                         <label for="InputTanggalAwal">Tanggal Awal</label>
-                        <input type="date" class="form-control" name="tanggal_awal" id="tanggal_awal" placeholder="Tanggal Awal">
+                        <input type="date" class="form-control" name="tanggal_awal" id="tanggal_awal" placeholder="Tanggal Awal" required>
                       </div>
                       <div class="form-group">
                         <label for="InputTanggal Akhir">Tanggal Akhir</label>

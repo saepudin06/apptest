@@ -14,7 +14,7 @@ class ImportExcelController extends Controller
     function index($id) {
 
     	$datamg = ManageProject::find($id);
-    	$data = DB::table('users')->where('manage_project_id', $id)->orderBy('id', 'DESC')->get();
+    	$data = DB::table('users')->where('manage_project_id', $id)->orderBy('id', 'DESC')->paginate(5);
      	return view('import_excel', compact('datamg','data'));
     }
 
