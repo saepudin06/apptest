@@ -71,7 +71,7 @@
                       </div>
                       <div class="form-group">
                         <label for="InputDeskripsi">Deskripsi</label>
-                        <textarea class="form-control" name="deskripsi" id="deskripsi" rows="3"></textarea>
+                        <textarea class="form-control" name="deskripsi" id="deskripsi" rows="3"required ></textarea>
                       </div>
                       <div class="form-group">
                         <label for="InputTanggalAwal">Tanggal Awal</label>
@@ -79,7 +79,7 @@
                       </div>
                       <div class="form-group">
                         <label for="InputTanggal Akhir">Tanggal Akhir</label>
-                        <input type="date" class="form-control" name="tanggal_akhir" id="tanggal_akhir" placeholder="Tanggal Akhir">
+                        <input type="date" class="form-control" name="tanggal_akhir" id="tanggal_akhir" placeholder="Tanggal Akhir" required>
                       </div>
                       
                     

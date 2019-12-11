@@ -67,6 +67,8 @@
             $(e.target).closest('form').submit() // Post the surrounding form
         }
     });
+
+  
 </script>
 </body>
 </html>

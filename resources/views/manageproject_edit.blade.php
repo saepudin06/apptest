@@ -30,7 +30,7 @@
               </div>
               <div class="form-group">
                 <label for="InputDeskripsi">Deskripsi</label>
-                <textarea class="form-control" name="deskripsi" id="deskripsi" rows="3" required>{{ $data->deskripsi }}</textarea>
+                <textarea class="form-control" name="deskripsi" id="deskripsi" rows="3">{{ $data->deskripsi }}</textarea>
               </div>
               <div class="form-group">
                 <label for="InputTanggalAwal">Tanggal Awal</label>
@@ -38,7 +38,7 @@
               </div>
               <div class="form-group">
                 <label for="InputTanggal Akhir">Tanggal Akhir</label>
-                <input type="date" class="form-control" name="tanggal_akhir" id="tanggal_akhir" placeholder="Tanggal Akhir" value="{{ $data->tanggal_akhir }}" required>
+                <input type="date" class="form-control" name="tanggal_akhir" id="tanggal_akhir" placeholder="Tanggal Akhir" value="{{ $data->tanggal_akhir }}">
               </div>
                   
                 <button type="submit" class="btn btn-primary">Submit</button>
